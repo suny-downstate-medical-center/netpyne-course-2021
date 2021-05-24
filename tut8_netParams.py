@@ -13,6 +13,11 @@ PYRcell = {'secs': {}}
 PYRcell['secs']['soma'] = {'geom': {}, 'mechs': {}}  # soma params dict
 PYRcell['secs']['soma']['geom'] = {'diam': 18.8, 'L': 18.8, 'Ra': 123.0}  # soma geometry
 PYRcell['secs']['soma']['mechs']['hh'] = {'gnabar': 0.12, 'gkbar': 0.036, 'gl': 0.003, 'el': -70}  # soma hh mechanism
+
+PYRcell['secs']['dend'] = {'geom': {}, 'mechs': {}}  # soma params dict
+PYRcell['secs']['dend']['geom'] = {'diam': 1.0, 'L': 50.0, 'Ra': 123.0}  
+PYRcell['secs']['dend']['mechs']['pas'] = {}
+
 netParams.cellParams['PYR'] = PYRcell
 
 ## Population parameters
@@ -20,7 +25,7 @@ netParams.popParams['S'] = {'cellType': 'PYR', 'numCells': 20}
 netParams.popParams['M'] = {'cellType': 'PYR', 'numCells': 20}
 
 ## Synaptic mechanism parameters
-netParams.synMechParams['exc'] = {'mod': 'Exp2Syn', 'tau1': 0.1, 'tau2': cfg.synMechTau2, 'e': 0}  # excitatory synaptic mechanism
+netParams.synMechParams['exc'] = {'mod': 'Exp2Syn', cfg.synMechTau1: 0.1, 'tau2': cfg.synMechTau2, 'e': 0}  # excitatory synaptic mechanism
 
 # Stimulation parameters
 netParams.stimSourceParams['bkg'] = {'type': 'NetStim', 'rate': 10, 'noise': 0.5}
