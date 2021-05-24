@@ -7,7 +7,7 @@ def batchTau1Tau2():
 
         # fill in with parameters to explore and range of values (key has to coincide with a variable in simConfig)
         params['synMechTau1'] = [0.01, 0.1, 1.0]
-        params['synMechTau2'] = [1.0, 5.0, 10.0]
+        params['synMechTau2'] = [1.0, 2.0, 3.0]
         
 
         # create Batch object with parameters to modify, and specifying files to use
