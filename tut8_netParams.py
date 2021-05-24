@@ -39,4 +39,6 @@ netParams.connParams['S->M'] = {    #  S -> M label
     'probability': 0.5,             # probability of connection
     'weight': cfg.connWeight,       # synaptic weight
     'delay': 5,                     # transmission delay (ms)
-    'synMech': 'exc'}               # synaptic mechanism
+    'synMech': 'exc',
+    'sec': 'dend',
+    'loc': 1.0}               # synaptic mechanism
